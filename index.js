@@ -1,3 +1,19 @@
+const rockBtn = document.querySelector(".rock");
+const paperBtn = document.querySelector(".paper");
+const scissorsBtn = document.querySelector(".scissors");
+
+const btnList = document.querySelectorAll("button");
+
+btnList.forEach((button) => {
+  console.log(button);
+});
+
+console.log(rockBtn, paperBtn, scissorsBtn, btnList);
+
+rockBtn.addEventListener("click", () => {
+  playRound();
+});
+
 let humanScore = 0,
   computerScore = 0;
 
@@ -46,17 +62,17 @@ function playRound() {
   checkWin(humanChoice, computerChoice);
 }
 
-for (let i = 0; i < 5; i++) {
-  playRound();
+// for (let i = 0; i < 5; i++) {
+//   playRound();
 
-  console.log("Your score: ", humanScore);
-  console.log("CPU score: ", computerScore);
-}
+//   console.log("Your score: ", humanScore);
+//   console.log("CPU score: ", computerScore);
+// }
 
-if (humanScore == computerScore) {
-  console.log("It's a tie!");
-} else if (humanScore > computerScore) {
-  console.log("You won!");
-} else {
-  console.log("Computer won!");
-}
+// if (humanScore == computerScore) {
+//   console.log("It's a tie!");
+// } else if (humanScore > computerScore) {
+//   console.log("You won!");
+// } else {
+//   console.log("Computer won!");
+// }
